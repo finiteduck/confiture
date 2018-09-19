@@ -6,7 +6,7 @@ LINK = -L E:\Code\mingw_dev_libs\lib -lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf
 all: main.exe
 
 %.exe: %.cpp
-	g++ $(LINK) $(INCLUDES) $(CPPFLAGS) -o $@ $<
+	g++ $< $(INCLUDES) $(CPPFLAGS) $(LINK) -o $@
 
 .PHONY: clean
 clean:
